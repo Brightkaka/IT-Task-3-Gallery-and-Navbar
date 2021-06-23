@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NavBar & Random Gallery</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="navigation">
+      <a href="navbar.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="galleryhtml">Script</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  <div class="main">
+    <h1>Navigation Bar and Random Gallery</h1>
+<form>
+  <fieldset>
+    <legend>Height, Width & Border</legend>
+    <label for="height">Height</label><input id="height" type="number" min="300" max="900"><br><br>
+    <label for="width">Width</label><input id="width" type="number" min="300" max="900"> <br><br>
+    <label for="border">Border</label><input id="border" type="number" min="1" max="25"><br><br>
+  </fieldset>
+</form>
+
+<button type="button" onclick="change()">clicktochange</button><br><br>
+
+<img id="image" src="images/1.jpg" alt="notfound">
+</div>
+
+<script type="text/javascript">
+  var imagesArray=["images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg",
+                "images/6.jpg","images/7.jpg","images/8.jpg"];
+
+  function change() {
+    var random=Math.floor(Math.random()*imagesArray.length);
+    document.getElementById('image').src=imagesArray[random];
+  }
+
+  height.onchange = function(){
+              image.style.height = this.value + "px";
+              }
+  width.onchange = function()
+  {
+      image.style.width = this.value + "px";
+  }
+
+  border.onchange = function(){
+      document.getElementById("image").border=border.value;
+      document.getElementById("image").style.borderColor="green";
+  }
+</script>
+</body>
+</html>
